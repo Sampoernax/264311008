@@ -2,7 +2,6 @@ CREATE DATABASE IF NOT EXISTS smart_farming_db;
 
 USE smart_farming_db;
 
--- Tabel induk 1: lahan
 CREATE TABLE lahan (
     id_lahan INT UNSIGNED AUTO_INCREMENT,
     nama_lahan VARCHAR(100) NOT NULL,
@@ -13,7 +12,6 @@ CREATE TABLE lahan (
     PRIMARY KEY (id_lahan)
 ) ENGINE=InnoDB;
 
--- Tabel induk 2: sensor
 CREATE TABLE sensor (
     id_sensor INT UNSIGNED AUTO_INCREMENT,
     kode_sensor VARCHAR(20) NOT NULL UNIQUE,
@@ -23,7 +21,6 @@ CREATE TABLE sensor (
     PRIMARY KEY (id_sensor)
 ) ENGINE=InnoDB;
 
--- Tabel transaksi/anak: data_sensor
 CREATE TABLE data_sensor (
     id_data BIGINT UNSIGNED AUTO_INCREMENT,
     id_lahan INT UNSIGNED NOT NULL,
